@@ -1,41 +1,157 @@
-.nav-bar{
-    flex-grow: 0;
-}
-
+/* VARIABLES */
 :root{
     --bs-navbar-brand-margin-end: 30rem;
+    --color-primario: #f2efe2;
+    --color-primario-mod:#fdd000;
+    --color-secundario: #292727;
+    --color-secundario-mod: #d9ad7e;
+    --color-terciario: #5d6d7c;
+    
+    --color-principal-mod-rgb: 0,0,0;
 }
 
-.segundaFila{
-    height: 19rem;
+/* ESTILOS GENERALES */
+
+section{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5{
+    color: var(--color-secundario);
+}
+
+.enlace:hover{
+    color: var(--color-primario);
+}
+
+/* GOOGLE FONTS */
+.bruno-ace-sc-regular {
+    font-family: "Bruno Ace SC", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.montserrat-alternates-regular {
+    font-family: "Montserrat Alternates", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* MENU DE NAVEGACIÓN */
+.navegacion {
+    background-color: var(--color-secundario);
+}
+
+.navegacion .navbar-nav .nav-link,
+.navbar-brand {
+    color: var(--color-primario-mod);
+}
+
+/* Estilos para cambiar el color de los objetos del menu de navegacion cuando el raton esta encima*/
+.navegacion:hover .navbar-nav:hover .nav-link:hover,
+.navegacion:hover .navbar-brand:hover,
+.navegacion .navbar-nav .nav-link:active,
+.navegacion .navbar-nav .nav-link:focus,
+.navbar-brand:active,
+.navbar-brand:focus {
+    color: var(--color-primario);
+}
+
+.navegacion .navbar-nav .nav-link:visited,
+.navbar-brand:visited {
+    color: var(--color-primario-mod);
+}
+  
+/* Tamaño del logo/nombre */
+.logo {
+    width: 7.8125rem;
+    font-size: 1.5em;
+}
+
+.icono{
+    color: var(--color-primario-mod);
+}
+
+.icono:hover{
+    color: var(--color-primario);
+}
+
+/* SECCION DE NOTICIAS */
+.noticias {
+    background-color: var(--color-primario);
+    padding: 3.125rem;
+    padding-top: 6.25rem;
+}
+
+.card-title {
+    color: var(--color-primario-mod);
+}
+
+.text-bg-dark {
+    color: var(--color-secundario-mod);
+}
+
+/* Redimension de filas 2 y 3*/
+.segundaFila {
+    height: 35rem;
     overflow: hidden;
 }
 
-.segundaImagenFila{
+.terceraFila{
+    min-height: 30rem;
+}
+
+.segundaImagenFila {
     height: 100%;
     object-position: center;
 }
 
-.carrusel {
+/* Texto e imagen de cada noticia*/
+.contenedorTexto {
+    background-color: rgba(var(--color-principal-mod-rgb), 0.7);
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    margin-bottom: auto;
+}
+
+.card-img-overlay {
     display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-title {
+    margin-bottom: auto;
+    opacity: 1;
+}
+
+.card-text {
+    color: var(--color-secundario-mod);
+    opacity: 1;
+}
+
+/* SECCIÓN DE CARRUSEL */
+.carrusel {
+    background-color: var(--color-secundario-mod);
     justify-content: center;
     align-items: center;
     padding: 2rem;
 }
   
+/* Tamaño de la imagen del carrusel*/
 .contenedorCarrusel {
-    max-width: 1100px;
-    width: 100%;
+    width: 70%;
 }
   
 #carouselExampleCaptions {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 0.25rem 0.5rem rgba(var(--color-principal-mod-rgb), 0.1);
+    border-radius: 0.5rem;
     overflow: hidden;
 }
   
 .carousel-inner {
-    height: 400px;
+    height: 25rem;
 }
   
 .carousel-item {
@@ -50,7 +166,108 @@
 }
   
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    padding: 10px;
+    background-color: rgba(var(--color-principal-mod-rgb), 0.7);
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+}
+
+/* Colores del texto*/
+.tituloCarrusel{
+    color: var(--color-primario-mod);
+}
+
+.parrafoCarrusel{
+    color: var(--color-secundario-mod);
+}
+
+/* Iconos de siguiente o anterior en el carrusel*/
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+    border-radius: 0.4375rem;
+    color: var(--color-primario-mod);
+}
+
+
+/* SECCION DE FORMUALRIO */
+.formulario {
+    padding: 2rem;
+    background-color: var(--color-primario);
+}
+
+.contenedorFormulario {
+    width: 50%;
+    max-width: 37.5rem; 
+    padding: 2rem; 
+    background-color: var(--color-terciario);
+    border-radius: 0.625rem; 
+}
+
+/* Colores del texto*/
+.tituloFormulario{
+    color: var(--color-primario-mod);
+}
+
+.textoFormulario{
+    color: var(--color-secundario);
+}
+
+/* Boton del fomulario */
+.btn-outline-warning {
+    color: var(--color-primario-mod);
+}
+
+.btn-outline-warning:hover {
+    color: var(--color-secundario);
+}
+
+/* Campos de validacion para el formulario*/
+.form-control:valid {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.form-control:valid:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.form-control:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--color-secundario);
+    color: var(--color-secundario-mod);
+}
+
+/* Colores para el texto del fomulario*/
+.tituloFooter{
+    color: var(--color-primario-mod);
+}
+
+.textoFooter{
+    color: var(--color-secundario-mod);
+}
+
+/* Iconos del footer (Font Awesome) con y sin :hover */
+
+.iconoFooter{
+    color: var(--color-secundario-mod);
+    transition: color 0.3s ease;
+}
+
+.iconoFooter:hover{
+    color: var(--color-primario);
+    transform: scale(1.2)
+}
+
+.iconoFooter i {
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.iconoFooter:hover i {
+    transform: scale(1.2);
 }

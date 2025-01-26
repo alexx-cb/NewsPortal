@@ -16,200 +16,320 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-
+        <!--Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
         <link href="./css/style.css" rel="stylesheet" />
     </head>
 
     <body>
+      <!-- NAVEGACION -->
         <header>
+          <nav class="navbar navbar-expand-lg navegacion fixed-top bruno-ace-sc-regular">
+            <div class="container-fluid">
+              <!-- Logo -->
+              <a class="pl-5 navbar-brand logo" href="#">El PitLane</a>
 
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <a class="pl-5 navbar-brand" href="#">Logo</a>
-                  
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-              
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-5 ps-5 mb-2 mb-lg-0 gl-5">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Link</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#" tabindex="-1">Disabled</a>
-                      </li>
-                    </ul>
-                    
-
-                    <div class=" ms-auto">
-                        <form class="d-flex" role="search">
-                            <button class="btn btn-outline-success me-2" type="submit">Iniciar Sesión</button>
-                            <button class="btn btn-outline-success" type="submit">Registrarse</button>
-                          </form>
-                    </div>
-                    
-                  </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <!-- Elementos del menú -->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Margen, paddin y gap para la lista de elementos, mas la clase de navbar de Bootstrap-->
+                <ul class="navbar-nav ms-5 ps-5 mb-2 mb-lg-0 gl-5">
+                  <li class="nav-item">
+                    <a class="nav-link active enlace" aria-current="page" href="#noticias">Actualidad</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active enlace" href="#circuito">Fechas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active enlace" href="#formulario">No te pierdas</a>
+                  </li>
+                </ul>
+                <!-- Icono de Sesion de Font Awesome alineado a la derecha-->
+                <div class="ms-auto">
+                  <a href="#formulario" class="icono me-3"><i class="fas fa-user-circle fa-2x"></i></a>
                 </div>
-              </nav>
+              </div>
+            </div>
+          </nav>
         </header>
+
+        <!-- MAIN -->
         <main>
-          <section class="noticias m-5">
+          <!-- Seccion Noticias-->
+          <section id="noticias" class="noticias">
             <div class="container text-center">
+              <h1 class="mb-4 bruno-ace-sc-regular">Noticias Destacadas</h1>
+
+              <!-- Grid de Noticias-->
               <!-- Primera fila -->
               <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+
+                <!-- Primera columna - 8 ancho-->
                 <div class="col col-md-8">
-                  <div class="card text-bg-dark">
-                    <img src="./img/alonoso.jpg" class="card-img object-fit-cover" alt="...">
+                  <!-- Card de bootstrap-->
+                  <div class="card">
+                    <img src="./img/hamilton.webp" class="card-img object-fit-cover" alt="Presentacion de Ferrari 2025">
+                    <!-- Contenedores de texto -->
                     <div class="card-img-overlay d-flex flex-column">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text flex-grow-1">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                      <div class="contenedorTexto">
+                        <h5 class="card-title bruno-ace-sc-regular">Hamilton en Maranello</h5>
+                        <p class="card-text flex-grow-1 montserrat-alternates-regular">Hamilton en Ferrari ya es el presente de la F1, y asi lo demuestra esta foto tomada en Maranello al igual que grandes leyendas como Schumacher o Vettel.</p>       
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- Segunda noticia - 4 ancho -->
                 <div class="col col-md-4 d-flex">
-                  <div class="card text-bg-dark flex-fill">
-                    <img src="./img/alonoso.jpg" class="card-img h-100 object-fit-cover" alt="...">
+                  <!-- Card con flexx-fill para ocupar todo el tamaño con la imagen-->
+                  <div class="card flex-fill">
+                    <img src="./img/alonoso.jpg" class="card-img h-100 object-fit-cover" alt="Fernando es una referencia">
                     <div class="card-img-overlay d-flex flex-column">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text flex-grow-1">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                      <div class="contenedorTexto">
+                        <h5 class="card-title bruno-ace-sc-regular">Fernando en el punto de mira</h5>
+                        <p class="card-text flex-grow-1 montserrat-alternates-regular">"Sigue siendo una referencia", expresa Oliver Oakes al ver que Fernando sigue siendo uno de los mejores pilotos aún con sus 43 años</p>       
+                      </div>
                     </div>
                   </div>
                 </div>
+
               </div>
           
               <!-- Segunda fila -->
               <div class="row g-4 mb-4">
+
+                <!-- Segunda noticia con el 100% del ancho del grid-->
                 <div class="col-12">
-                  <div class="card text-bg-dark">
+                  <div class="card">
                     <div class="card-img-container segundaFila">
-                      <img src="./img/alonoso.jpg" class="card-img w-100 object-fit-cover segundaImagenFila" alt="...">
+                      <img src="./img/presentacion.jpg" class="card-img w-100 object-fit-cover segundaImagenFila" alt="presentacion nuevo ferrari 2025">
                     </div>
                     <div class="card-img-overlay d-flex flex-column">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text flex-grow-1">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                      <div class="contenedorTexto">
+                        <h5 class="card-title bruno-ace-sc-regular">Se anuncia la presentacion del Ferrari de 2025</h5>
+                        <p class="card-text flex-grow-1 montserrat-alternates-regular">El nuevo monoplaza que pilotaran esta temporada Leclerc y Hamilton, se presentará el próximo 19 de Febrero en Londres.</p>       
+                      </div>
                     </div>
                   </div>
                 </div>
+
               </div>
           
               <!-- Tercera fila -->
               <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                <!-- Noticia con 6 de ancho respecto al grid-->
                 <div class="col ">
-                  <div class="card text-bg-dark">
-                    <img src="./img/alonoso.jpg" class="card-img h-100 object-fit-cover" alt="...">
+                  <div class="card">
+                    <div class="card-img-container tereraFila">
+                      <img src="./img/sainz.webp" class="card-img w-100 object-fit-cover segundaImagenFila" alt="Sainz en Williams">
+                    </div>
                     <div class="card-img-overlay d-flex flex-column">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text flex-grow-1">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                      <div class="contenedorTexto">
+                        <h5 class="card-title bruno-ace-sc-regular">Sainz sobre el Williams</h5>
+                        <p class="card-text flex-grow-1 montserrat-alternates-regular">El nuevo piloto de la escudería Williams, Carlos Sainz, habla de buenas sensaciones tras probar el monoplaza de este año en los test de post temporada en Abu Dhabi</p>       
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- noticia con 6 de ancho respecto al grid -->
                 <div class="col">
-                  <div class="card text-bg-dark">
-                    <img src="./img/alonoso.jpg" class="card-img object-fit-cover" alt="...">
+                  <div class="card">
+                    <div class="card-img-container tereraFila">
+                      <img src="./img/perez.webp" class="card-img w-100 object-fit-cover segundaImagenFila" alt="Checho y la F1">
+                    </div>
                     <div class="card-img-overlay d-flex flex-column">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text flex-grow-1">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                      <div class="contenedorTexto">
+                        <h5 class="card-title bruno-ace-sc-regular">Checho y la F1</h5>
+                        <p class="card-text flex-grow-1 montserrat-alternates-regular">Perez Sr. afirma que checho volverá al Gran Circo despues de un año sabatico, igual que hicieron en su momento Alonso, Lauda o Räikkönen</p>       
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </section>
 
-          <section class="carrusel">
+          <!-- SECCION DE CARRUSEL -->
+           <!-- Display flex, column y align items-center para los contenedores inferiores-->
+          <section id="circuito" class="carrusel d-flex flex-column align-items-center">
+            <h2 class="mb-4 bruno-ace-sc-regular">Próximos circuitos</h2>
+
+            <!-- Contenedor que determina el tamaño del carrusel -->
             <div class="contenedorCarrusel">
               <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-              <div class="carousel-indicators">
+              
+                <!-- Elemento inferior que indica la diapositiva del carrusel -->
+                <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
+
+              <!-- Contenido del carrusel -->
               <div class="carousel-inner">
+                <!-- Primera diapositiva-->
                 <div class="carousel-item active" data-bs-interval="3000">
-                  <img src="./img/alonoso.jpg" class="d-block w-100" alt="...">
+                  <img src="./img/australia.jpg" class="d-block w-100" alt="Australia">
+
+                  <!-- texto dentro de la diapositiva -->
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5 class="bruno-ace-sc-regular tituloCarrusel">Albert Park - Melbourne - Australia</h5>
+                    <p class="montserrat-alternates-regular parrafoCarrusel">Este año la primera cita del calendario será como hace años, en Autralia del próximo 14 al 16 de Marzo</p>
                   </div>
                 </div>
+
+                <!-- Segunda Diapositiva -->
                 <div class="carousel-item active" data-bs-interval="3000">
-                  <img src="./img/alonso2.jpg" class="d-block w-100" alt="...">
+                  <img src="./img/china.jpg" class="d-block w-100" alt="China">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <h5 class="bruno-ace-sc-regular tituloCarrusel">Autódromo Internacional de Shanghái - China</h5>
+                    <p class="montserrat-alternates-regular parrafoCarrusel">Esta cita se adelantará respecto al año pasado siendo este año del 21 al 23 de Marzo</p>
                   </div>
                 </div>
+
+                <!-- Tercera Diapositiva -->
                 <div class="carousel-item active" data-bs-interval="3000">
-                  <img src="./img/alonso3.jpg" class="d-block w-100" alt="...">
+                  <img src="./img/suzuka.jpg" class="d-block w-100" alt="Japon">
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h5 class="bruno-ace-sc-regular tituloCarrusel">Suzuka - Japon</h5>
+                    <p class="montserrat-alternates-regular parrafoCarrusel">Como ya es costumbre, el anisado Gran Premio de Japón, será de las primeras citas de esta próxima temporada 2025, que tendrá lugar del 4 al 6 de Abril</p>
                   </div>
                 </div>
+
               </div>
+
+              <!-- Boton para retroceder entre diapositivas-->
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
+
+              <!-- Boton para avanzar diapositivas-->
               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
-            </div>
+
+              </div>
             </div>
           </section>
           
+          <!-- SECCION DE FORMULARIO / REGISTRO-->
+           <!-- Centramos con flex, justify-content-center y alging-items-center-->
+          <section id="formulario" class="formulario d-flex justify-content-center align-items-center">
 
+            <!-- Tamaño del fomulario -->
+            <div class="contenedorFormulario">
+              <div class="row justify-content-center">
+                <!-- Grid de 12 columnas, para poner cada elemento igual al anterior-->
+                <div class="col-12">
 
-        </main>
+                  <h2 class="text-center mb-4 tituloFormulario bruno-ace-sc-regular">Estate siempre enterado de nuestras noticias</h2>
 
-        
-          <footer class="bg-dark text-light py-4">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
-                  <h5>Sobre Nosotros</h5>
-                  <p>Tu fuente confiable de noticias actualizadas las 24 horas del día, los 7 días de la semana.</p>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                  <h5>Secciones</h5>
-                  <ul class="list-unstyled">
-                    <li><a href="#" class="text-light">Política</a></li>
-                    <li><a href="#" class="text-light">Economía</a></li>
-                    <li><a href="#" class="text-light">Deportes</a></li>
-                    <li><a href="#" class="text-light">Tecnología</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h5>Síguenos</h5>
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-github fa-2x"></i></a></li>
-                  </ul>
+                  <!-- Formulario con clase de validaciones-->
+                  <form class="needs-validation">
+
+                    <!-- Campo nombre-->
+                    <div class="mb-3">
+                      <label for="inputNombre" class="form-label montserrat-alternates-regular textoFormulario">Nombre</label>
+                      <input type="text" class="form-control" id="inputNombre" required>
+                    </div>
+
+                    <!-- Campo Correo-->
+                    <div class="mb-3">
+                      <label for="inputEmail" class="form-label montserrat-alternates-regular textoFormulario">Correo electrónico</label>
+                      <input type="email" class="form-control" id="inputEmail" required>
+                    </div>
+
+                    <!-- Campo contraseña-->
+                    <div class="mb-3"> 
+                      <label for="inputPassword" class="form-label montserrat-alternates-regular textoFormulario">Contraseña</label>
+                      <input type="password" class="form-control" id="inputPassword" required>
+                    </div>
+
+                    <!-- Campo Repite Contraseña-->
+                    <div class="mb-3">
+                      <label for="inputConfirmPassword" class="form-label montserrat-alternates-regular tex">Confirmar Contraseña</label>
+                      <input type="password" class="form-control" id="inputConfirmPassword" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-warning w-100 montserrat-alternates-regular">Registrarse</button>
+
+                  </form>
+
                 </div>
               </div>
-              <hr class="my-4">
+            </div>
+          </section>
+
+        </main>
+          <!-- FOOTER -->
+          <footer class="py-4">
+            <!-- Contenedor para el footer-->
+            <div class="container">
+
+              <!-- Primera Fila-->
               <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                  <p>&copy; 2025 Tu Portal de Noticias. Todos los derechos reservados.</p>
+                <!-- Primera columna con 4 de ancho margen inferior y evita el marquen para la segunda fila con "mb-md-0"-->
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <h5 class="bruno-ace-sc-regular tituloFooter">Sobre Nosotros</h5>
+                  <p class="montserrat-alternates-regular">Tu fuente confiable de noticias actualizadas las 24 horas del día, los 7 días de la semana.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" class="text-light">Términos de Uso</a></li>
-                    <li class="list-inline-item"><a href="#" class="text-light">Política de Privacidad</a></li>
+
+                <!-- Segunda columna // Secciones-->
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <h5 class="bruno-ace-sc-regular tituloFooter">Secciones</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="textoFooter enlace montserrat-alternates-regular">Política</a></li>
+                    <li><a href="#" class="textoFooter enlace montserrat-alternates-regular">Economía</a></li>
+                    <li><a href="#" class="textoFooter enlace montserrat-alternates-regular">Deportes</a></li>
+                    <li><a href="#" class="textoFooter enlace montserrat-alternates-regular">Tecnología</a></li>
                   </ul>
                 </div>
+
+                <!-- Tercera columna // Redes Sociales-->
+                <div class="col-md-4">
+                  <h5 class="bruno-ace-sc-regular tituloFooter">Síguenos</h5>
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.instagram.com/aalex.cb/?next=%2F" target="_blank" class="iconoFooter"><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/alejandro-cabrera-barea-689910308/" target="_blank" class="iconoFooter"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/alexx-cb" target="_blank" class="iconoFooter"><i class="fab fa-github fa-2x"></i></a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- Linea Divisoria-->
+              <hr class="my-4">
+              <!-- Segunda Fila-->
+              <div class="row">
+
+                <!-- Primera columna alineada a la izquierda con 6 de ancho-->
+                <div class="col-md-6 text-center text-md-start">
+                  <p class="montserrat-alternates-regular tituloFooter">&copy; 2025 El PitLane. Todos los derechos reservados.</p>
+                </div>
+
+                <!-- Segunda columna alineada a la derecha con 6 de ancho-->
+                <div class="col-md-6 text-center text-md-end">
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#" class="textoFooter montserrat-alternates-regular enlace">Términos de Uso</a></li>
+                    <li class="list-inline-item"><a href="#" class="textoFooter montserrat-alternates-regular enlace">Política de Privacidad</a></li>
+                  </ul>
+                </div>
+
               </div>
             </div>
           </footer>
